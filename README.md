@@ -1,4 +1,8 @@
-# client
+# 安卓内网端
+#####与其它版本兼容
+
+下载：
+https://github.com/nat-cloud/android-client/releases
 
 nat-cloud client
 
