@@ -3,7 +3,7 @@
 
 下载：
 https://github.com/nat-cloud/android-client/releases
-
+访问工具下载：https://github.com/nat-cloud/android-explorer/releases
 nat-cloud client
 ![image](https://github.com/nat-cloud/android-client/blob/master/image/screen.png?raw=true)
 ## Getting Started
