@@ -1,5 +1,6 @@
-# 安卓内网端
-##### 与其它版本兼容
+# GateWay(物联网、私有云、内外穿透网关)
+
+### 用来管理本网络的设备，访问本网络的私有云和远程访问本网络的端口
 
 #### 下载：
 ##### https://github.com/OpenIoTHub/GateWay/releases
