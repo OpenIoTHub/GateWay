@@ -2,10 +2,10 @@
 ##### 与其它版本兼容
 
 下载：
-https://github.com/nat-cloud/android-client/releases
-访问工具下载：https://github.com/nat-cloud/android-explorer/releases
+https://github.com/OpenIoTHub/GateWay/releases
+访问工具下载：https://github.com/OpenIoTHub/OpenIoTHub/releases
 nat-cloud client
-![image](https://github.com/nat-cloud/android-client/blob/master/image/screen.png?raw=true)
+![image](./screen.png)
 ## Getting Started
 
 This project is a starting point for a Flutter application.
