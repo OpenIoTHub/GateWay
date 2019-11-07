@@ -66,8 +66,8 @@ public class NatCloudClientService extends Service {
                     .setChannelId(CHANNEL_ONE_ID)
                     .setTicker("Nature")
                     .setSmallIcon(R.mipmap.ic_launcher)
-                    .setContentTitle("nat-cloud")
-                    .setContentText("内网穿透工具内网端正在运行")
+                    .setContentTitle("云易连(网关)")
+                    .setContentText("云易连网关正在运行")
                     .setContentIntent(pendingIntent)
                     .build();
             notification.flags |= Notification.FLAG_NO_CLEAR;
@@ -77,8 +77,8 @@ public class NatCloudClientService extends Service {
             Notification notification = new Notification.Builder(this)
                     .setTicker("Nature")
                     .setSmallIcon(R.mipmap.ic_launcher)
-                    .setContentTitle("nat-cloud")
-                    .setContentText("内网穿透工具内网端正在运行")
+                    .setContentTitle("云易连(网关)")
+                    .setContentText("云易连网关正在运行")
                     .setContentIntent(pendingIntent)
                     .build();
             notification.flags |= Notification.FLAG_NO_CLEAR;
