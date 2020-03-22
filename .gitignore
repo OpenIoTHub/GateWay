@@ -35,6 +35,9 @@
 **/android/gradlew.bat
 **/android/local.properties
 **/android/**/GeneratedPluginRegistrant.java
+#add by Farry
+**/android/key.properties
+**/android/key.jks
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
