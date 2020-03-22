@@ -22,7 +22,6 @@ jobs:
       - extra-google-android-support
     jdk: oraclejdk8
     sudo: false
-#    env: APK_OUTPUT=build/app/outputs/apk/release/app-arm64-v8a-release.apk
     addons:
       apt:
         sources:
@@ -32,13 +31,10 @@ jobs:
         - fonts-droid
     before_script:
     - git clone https://github.com/flutter/flutter.git
-#    - git clone https://github.com/OpenIoTHub/flutter_natcloud_service.git ../flutter_natcloud_service
     script:
     - yes | sdkmanager "platforms;android-28"
     - yes | sdkmanager "platforms;android-29"
-#    - "./flutter/bin/flutter upgrade"
     - "./flutter/bin/flutter doctor -v"
-#    - "./flutter/bin/flutter version v1.9.0"
     - "./flutter/bin/flutter pub get"
     - "./flutter/bin/flutter -v build apk --release --split-per-abi"
     - "./flutter/bin/flutter --version"
@@ -46,13 +42,14 @@ jobs:
       provider: releases
       skip_cleanup: true
       api_key:
-        secure: FJ/9t6TilxefjtU64QVjKea/qR+cLUv+dOti+3aspzudcUGWuCyUOKudhtc+PKv1B7pzjrwcAm4iNs4DD4Mm/DFdRmLgjL9+Xg8RLq6pEanr+apc8qG/nRA+NSD5F9Zkj7I4cVp4X2GhXvGJ1kMxt34SazcskdQJwnbLKcVQwXlWYelf1XbI24EZJHNyA+k1Oj980zG5WE2DJ4ETGHqzjB2NutDh1OAI64l4ZUv1/VEysJejsW1popoGbu0CN7/UY6Oedzqiv1NEbcBIez7VzN3lqFwTpfyQB/yglj6yXKuNutJjlvgjOy8a/wD4m9SGlZjrQ30ebB8Pol906T98qqyg/cT7aBc0GZZ0g19hvbheJwyq21yVy5Mf/VvQa389Ud0Kk27SmYDvyPhDyIB4vhT8pC0qDAnwaIEk+q1FkriMgtdrC+oCBuUe9bAeVymXSDc9yypaKbB8KU9xpLKOeznKe/cTIToM5TlGjWI0K1amdG/DVItwS5Xxx5sfLIjAoWghlfqdJI/znKLHkKQL4oEx8/pOcY652efFoNK0PBiYc7HMRm8UEQviZCqS9l08HEvtvSI5soyNQ2OOQa8PiD63YznwDemwP8AqUHiJnw7TRuOxhvINfG1eVLYqinPD/NkH9UVdP3eVkmjrkRng2pkYBAavRLyZuLosUFtVhXQ=
+        secure: tIC0p7eQNGas5h0OQFap54IawkHWB1pH2sybLelm+bb2pREHdDtwQH2VfspGzS2c8Q51B99PmE6UwtYESO4iqMnNlUN51XWcX50nA65tDWHdQUbd/J/7EcexjoPgqfxZ99qJAPXZfuu0Hk1gDqHjx1NmCw+gwbThuOu/P3cMztb88fYXzQODUqL1PZSSSVDS4xJN+bLWsMlf1PooS+oTEaWP5f6yXCPF7dHu9hcHqdO+9dOfLOD9pkfCZE7ml0u9tpTGeZ0kUOcJUBJQsoI23dyzmz2JBPY/zRQdkHDbWhuF7G7cyW7GjllK83/PMXWSl9veS90BRp30d6Snz8YO3cLU41+dCAX3KvpS5PHJEwWDSObuepGipYzGSV1rqBILEvEdiiR0ynO5UBQ600BbspdcCrvi0cA7enjGNoNETo8GXKHnmSESo4rKt4OBww110Mq44Pl1XxxbljxBDaPU0Qsksf0+edf+J2yJARs41/OgENuc8PLDcO41GQH4kFiDLoDYIB9HJspgsOBzMi/QsHFjp3UL/9ewU2fT0S7hGq6CrXaKYdLHGe9e4+bWXnETwTt2uKo6ov27VyymvbahEtgjuXiJTxANB6t30wwPYSASIPhXAxTr9lLYn7LHKvsstjiupTFkc7EpKC9n2NKEH5qhD5c68i3cw+sertyhHuM=
       file:
-        - "build/app/outputs/apk/release/app-armeabi-v7a-release.apk"
-        - "build/app/outputs/apk/release/app-arm64-v8a-release.apk"
-        - "build/app/outputs/apk/release/app-x86_64-release.apk"
+      - build/app/outputs/apk/release/app-armeabi-v7a-release.apk
+      - build/app/outputs/apk/release/app-arm64-v8a-release.apk
+      - build/app/outputs/apk/release/app-x86_64-release.apk
       on:
         tags: true
 before_install:
-- openssl aes-256-cbc -K $encrypted_9bf81d20de01_key -iv $encrypted_9bf81d20de01_iv -in secrets.tar.enc -out secrets.tar -d
+- openssl aes-256-cbc -K $encrypted_9bf81d20de01_key -iv $encrypted_9bf81d20de01_iv
+  -in secrets.tar.enc -out secrets.tar -d
 - tar xvf secrets.tar -C ./android
