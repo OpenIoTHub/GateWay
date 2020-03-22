@@ -34,17 +34,17 @@ jobs:
     # build aar
     - git clone https://github.com/OpenIoTHub/gateway-go.git
     - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
-    - tar -zxvf go1.14.1.linux-amd64.tar.gz
-    - export GOROOT=/home/travis/build/OpenIoTHub/GateWay/go
-    - export PATH=$PATH:$GOROOT/bin:/home/travis/bin
+    - tar -zxvf go1.14.1.linux-amd64.tar.gz -C ../
+    - export GOROOT=/home/travis/build/OpenIoTHub/go
+    - export PATH=$PATH:$GOROOT/bin:/home/travis/go/bin
     - go get golang.org/x/mobile/cmd/gomobile
     - gomobile init
     - gomobile version
     - cd gateway-go/mobile
     - gomobile bind -target=android
-    - rm -rf ../../android/app/libs/*.aar
-    - cp ./client.aar ../../android/app/libs
-    - cd ../..
+    - rm -rf ../../GateWay/android/app/libs/*.aar
+    - cp ./client.aar ../../GateWay/android/app/libs
+    - cd ../../GateWay
     script:
     - yes | sdkmanager "platforms;android-28"
     - yes | sdkmanager "platforms;android-29"
