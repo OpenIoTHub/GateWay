@@ -50,9 +50,9 @@ jobs:
       file:
         - "build/app/outputs/apk/release/app-armeabi-v7a-release.apk"
         - "build/app/outputs/apk/release/app-arm64-v8a-release.apk"
+        - "build/app/outputs/apk/release/app-x86_64-release.apk"
       on:
         tags: true
 before_install:
-- openssl aes-256-cbc -K $encrypted_f0033d4e34c5_key -iv $encrypted_f0033d4e34c5_iv
-  -in secrets.tar.enc -out secrets.tar -d
+- openssl aes-256-cbc -K $encrypted_9bf81d20de01_key -iv $encrypted_9bf81d20de01_iv -in secrets.tar.enc -out secrets.tar -d
 - tar xvf secrets.tar -C ./android
