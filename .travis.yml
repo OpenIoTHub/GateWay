@@ -44,6 +44,7 @@ jobs:
     - gomobile bind -target=android
     - rm -rf ../../android/app/libs/*.aar
     - cp ./client.aar ../../android/app/libs
+    - cd ../..
     script:
     - yes | sdkmanager "platforms;android-28"
     - yes | sdkmanager "platforms;android-29"
