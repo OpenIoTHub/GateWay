@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'NatCloud内网端',
+      title: '云易连网关',
       theme: new ThemeData(
         primaryColor: Colors.purple,
       ),
