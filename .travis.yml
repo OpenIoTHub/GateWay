@@ -43,6 +43,7 @@ jobs:
     - cd gateway-go/mobile
     - gomobile bind -target=android
     - rm -rf ../../GateWay/android/app/libs/*.aar
+    - ls -a
     - cp ./client.aar ../../GateWay/android/app/libs
     - cd ../../GateWay
     script:
