@@ -39,7 +39,7 @@ jobs:
     - tar -zxf go1.14.1.linux-amd64.tar.gz -C ../
     - export GOROOT=/home/travis/build/OpenIoTHub/go
     - export PATH=$PATH:$GOROOT/bin:/home/travis/go/bin
-    - git clone golang.org/x/mobile/cmd/gomobile gomobile
+    - git clone https://golang.org/x/mobile/cmd/gomobile gomobile
     - cd gomobile/cmd/gomobie
     - go install
     - cd ../gobind
