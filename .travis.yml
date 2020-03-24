@@ -1,6 +1,8 @@
 cache:
   directories:
   - "$HOME/.pub-cache"
+env:
+  - GO111MODULE=on
 jobs:
   include:
   - stage: deployAPK
@@ -46,6 +48,7 @@ jobs:
     - ls -a
     - cp ./client.aar ../../GateWay/android/app/libs
     - cd ../../GateWay
+    # build aar over
     script:
     - yes | sdkmanager "platforms;android-28"
     - yes | sdkmanager "platforms;android-29"
