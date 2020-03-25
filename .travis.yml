@@ -3,6 +3,8 @@ cache:
   - "$HOME/.pub-cache"
 env:
   - GO111MODULE=on
+go:
+  - 1.14.1
 jobs:
   include:
   - stage: deployAPK
@@ -36,9 +38,9 @@ jobs:
     # build aar
     - go version
     - git clone https://github.com/OpenIoTHub/gateway-go.git
-    - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
-    - sudo tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
-    - export GOROOT=/usr/local/go
+#    - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
+#    - sudo tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
+#    - export GOROOT=/usr/local/go
     - export GOPATH=/home/travis/go
     - export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
     - go version
