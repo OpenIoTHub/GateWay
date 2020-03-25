@@ -53,8 +53,10 @@ jobs:
     - go get golang.org/x/mobile/cmd/gobind
     - gomobile init
     - gomobile version
-    - cd gateway-go/mobile
-    - gomobile bind -target=android
+    - pwd
+    - find / client.aar
+#    - cd gateway-go/mobile
+    - gomobile bind -target=android gateway-go/mobile
     - rm -rf ../../GateWay/android/app/libs/*.aar
     - ls -a
     - cp ./client.aar ../../GateWay/android/app/libs
