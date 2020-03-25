@@ -2,7 +2,7 @@ cache:
   directories:
   - "$HOME/.pub-cache"
 env:
-  - GO111MODULE=on
+#  - GO111MODULE=on
 jobs:
   include:
   - stage: deployAPK
