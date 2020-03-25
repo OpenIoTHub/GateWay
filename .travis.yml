@@ -1,7 +1,7 @@
 cache:
   directories:
   - "$HOME/.pub-cache"
-env:
+#env:
 #  - GO111MODULE=on
 jobs:
   include:
