@@ -40,7 +40,8 @@ jobs:
     - export GOROOT=/usr/local/go
     - export GOPATH=/home/travis/go
     - export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-    - git clone https://github.com/golang/mobile $GOPATH/src/golang.org/x
+    - go version
+    - git clone https://github.com/golang/mobile $GOPATH/src/golang.org/x/mobile
     - go install golang.org/x/mobile/cmd/gomobile
     - go install golang.org/x/mobile/cmd/gobind
     - gomobile init
