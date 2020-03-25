@@ -23,7 +23,7 @@ jobs:
       - extra-google-m2repository
       - extra-google-android-support
     jdk: oraclejdk8
-    sudo: false
+    sudo: true
     addons:
       apt:
         sources:
@@ -36,17 +36,15 @@ jobs:
     # build aar
     - git clone https://github.com/OpenIoTHub/gateway-go.git
     - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
-    - tar -zxf go1.14.1.linux-amd64.tar.gz -C ../
-    - export GOROOT=/home/travis/build/OpenIoTHub/go
-    - export PATH=$PATH:$GOROOT/bin:/home/travis/go/bin
-    - git clone https://golang.org/x/mobile gomobile
-    - cd gomobile/cmd/gomobie
-    - go install
-    - cd ../gobind
-    - go install
+    - tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
+    - export GOROOT=/usr/local/go
+    - export GOPATH=/home/travis/go
+    - export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+    - git clone https://github.com/golang/mobile $GOPATH/src/golang.org/x
+    - go install golang.org/x/mobile/cmd/gomobile
+    - go install golang.org/x/mobile/cmd/gobind
     - gomobile init
     - gomobile version
-    - cd ../../../
     - cd gateway-go/mobile
     - gomobile bind -target=android
     - rm -rf ../../GateWay/android/app/libs/*.aar
