@@ -35,12 +35,17 @@ jobs:
     - git clone https://github.com/flutter/flutter.git
     # build aar
     - git clone https://github.com/OpenIoTHub/gateway-go.git
+    # download golang
     - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
     - sudo tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
     - export GOROOT=/usr/local/go
     - export GOPATH=/home/travis/go
     - export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
     - go version
+    # download ndk
+    - wget https://dl.google.com/android/repository/android-ndk-r21-linux-x86_64.zip
+    - sudo unzip android-ndk-r21-linux-x86_64.zip -d $ANDROID_HOME
+    - export ANDROID_NDK_HOME=$ANDROID_HOME/android-ndk-r21
 #    - git clone https://github.com/golang/mobile $GOPATH/src/golang.org/x/mobile
 #    - go install golang.org/x/mobile/cmd/gomobile
 #    - go install golang.org/x/mobile/cmd/gobind
@@ -74,7 +79,8 @@ jobs:
       on:
         tags: true
 before_install:
-#- export PATH=/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/usr/local/android-sdk/tools/bin:/home/travis/bin:/home/travis/.local/bin:/opt/pyenv/shims:/home/travis/gopath/bin:/usr/local/maven-3.5.2/bin:/usr/local/cmake-3.9.2/bin:/usr/local/clang-5.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/android-sdk/tools:/usr/local/android-sdk/platform-tools:/opt/pyenv/bin
+- echo $ANDROID_HOME
+- export ANDROID_HOME=/usr/local/android-sdk
 #- which go
 - echo ========
 - echo $PATH
