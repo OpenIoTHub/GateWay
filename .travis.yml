@@ -36,15 +36,16 @@ jobs:
     # build aar
     - go version
     - git clone https://github.com/OpenIoTHub/gateway-go.git
-#    - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
-#    - sudo tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
-#    - export GOROOT=/usr/local/go
+    - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
+    - sudo tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
+    - export GOROOT=/usr/local/go
     - export GOPATH=/home/travis/go
     - export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
     - go version
-    - git clone https://github.com/golang/mobile $GOPATH/src/golang.org/x/mobile
-    - go install golang.org/x/mobile/cmd/gomobile
-    - go install golang.org/x/mobile/cmd/gobind
+#    - git clone https://github.com/golang/mobile $GOPATH/src/golang.org/x/mobile
+#    - go install golang.org/x/mobile/cmd/gomobile
+#    - go install golang.org/x/mobile/cmd/gobind
+    - go get golang.org/x/mobile/cmd/gomobile
     - gomobile init
     - gomobile version
     - cd gateway-go/mobile
@@ -73,7 +74,8 @@ jobs:
       on:
         tags: true
 before_install:
-- which go
+- export PATH=/home/travis/.rvm/gems/ruby-2.4.1/bin:/home/travis/.rvm/gems/ruby-2.4.1@global/bin:/home/travis/.rvm/rubies/ruby-2.4.1/bin:/home/travis/.rvm/bin:/usr/local/android-sdk/tools/bin:/home/travis/bin:/home/travis/.local/bin:/opt/pyenv/shims:/home/travis/gopath/bin:/usr/local/maven-3.5.2/bin:/usr/local/cmake-3.9.2/bin:/usr/local/clang-5.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/android-sdk/tools:/usr/local/android-sdk/platform-tools:/opt/pyenv/bin
+#- which go
 - echo ========
 - echo $PATH
 - openssl aes-256-cbc -K $encrypted_9bf81d20de01_key -iv $encrypted_9bf81d20de01_iv
