@@ -23,7 +23,7 @@ jobs:
       - extra-google-m2repository
       - extra-google-android-support
     jdk: oraclejdk8
-    sudo: true
+    sudo: false
     addons:
       apt:
         sources:
@@ -36,7 +36,7 @@ jobs:
     # build aar
     - git clone https://github.com/OpenIoTHub/gateway-go.git
     - wget https://dl.google.com/go/go1.14.1.linux-amd64.tar.gz
-    - tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
+    - sudo tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
     - export GOROOT=/usr/local/go
     - export GOPATH=/home/travis/go
     - export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
