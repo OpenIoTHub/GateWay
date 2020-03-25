@@ -54,7 +54,7 @@ jobs:
     - gomobile init
     - gomobile version
     - pwd
-    - find / client.aar
+#    - find / client.aar
 #    - cd gateway-go/mobile
     - gomobile bind -target=android gateway-go/mobile
     - rm -rf android/app/libs/*.aar
