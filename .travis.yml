@@ -57,10 +57,9 @@ jobs:
     - find / client.aar
 #    - cd gateway-go/mobile
     - gomobile bind -target=android gateway-go/mobile
-    - rm -rf ../../GateWay/android/app/libs/*.aar
+    - rm -rf android/app/libs/*.aar
     - ls -a
-    - cp ./client.aar ../../GateWay/android/app/libs
-    - cd ../../GateWay
+    - cp ./gateway-go/mobile/client.aar android/app/libs
     # build aar over
     script:
     - yes | sdkmanager "platforms;android-28"
