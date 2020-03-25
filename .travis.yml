@@ -23,7 +23,6 @@ jobs:
       - extra-google-m2repository
       - extra-google-android-support
     jdk: oraclejdk8
-    go: 1.14.1
     sudo: false
     addons:
       apt:
@@ -75,6 +74,8 @@ jobs:
         tags: true
 before_install:
 - which go
+- echo ========
+- echo $PATH
 - openssl aes-256-cbc -K $encrypted_9bf81d20de01_key -iv $encrypted_9bf81d20de01_iv
   -in secrets.tar.enc -out secrets.tar -d
 - tar xvf secrets.tar -C ./android
