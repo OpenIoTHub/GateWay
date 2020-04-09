@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primaryColor: Colors.purple,
       ),
-      home: new RandomWords(),
+      home: new GateWay(),
       darkTheme: new ThemeData(
         primaryColor: Colors.black,
       ),
@@ -23,12 +23,12 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class RandomWords extends StatefulWidget {
+class GateWay extends StatefulWidget {
   @override
-  createState() => new RandomWordsState();
+  createState() => new GateWayState();
 }
 
-class RandomWordsState extends State<RandomWords> {
+class GateWayState extends State<GateWay> {
   TextEditingController _host_controller = TextEditingController.fromValue(
       TextEditingValue(text: "guonei.nat-cloud.com"));
   TextEditingController _tcp_port_controller =
