@@ -16,6 +16,9 @@ class MyApp extends StatelessWidget {
         primaryColor: Colors.purple,
       ),
       home: new RandomWords(),
+      darkTheme: new ThemeData(
+        primaryColor: Colors.black,
+      ),
     );
   }
 }
