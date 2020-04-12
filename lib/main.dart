@@ -177,7 +177,7 @@ class GateWayState extends State<GateWay> {
   Widget build(BuildContext context) {
     return new Scaffold(
         appBar: new AppBar(
-          title: new Text("内网穿透(内网端)"),
+          title: new Text("云易连(网关)"),
         ),
         body: new ListView(
           children: <Widget>[

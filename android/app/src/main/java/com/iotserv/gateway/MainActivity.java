@@ -1,4 +1,4 @@
-package com.natcloud.nat_client;
+package com.iotserv.gateway;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,7 @@ public class MainActivity extends FlutterActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Intent it=new Intent(this, NatCloudClientService.class);
+    Intent it=new Intent(this, com.iotserv.gateway.NatCloudClientService.class);
     startService(it);
     GeneratedPluginRegistrant.registerWith(this);
   }
