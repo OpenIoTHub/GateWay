@@ -1,4 +1,4 @@
-package com.natcloud.nat_client;
+package com.iotserv.gateway;
 
 import android.annotation.TargetApi;
 import android.app.Notification;
@@ -49,7 +49,7 @@ public class NatCloudClientService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d("Service","onStartCommand invoke");
-        String CHANNEL_ONE_ID = "com.natcloud.nat_client";
+        String CHANNEL_ONE_ID = "com.iotserv.gateway";
         String CHANNEL_ONE_NAME = "Channel One";
         NotificationChannel notificationChannel = null;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
