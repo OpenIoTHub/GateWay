@@ -63,10 +63,15 @@ jobs:
     script:
     - yes | sdkmanager "platforms;android-28"
     - yes | sdkmanager "platforms;android-29"
+    - "mkdir release"
     - "./flutter/bin/flutter doctor -v"
     - "./flutter/bin/flutter pub get"
     - "./flutter/bin/flutter -v build apk --release --split-per-abi"
+    - "mv build/app/outputs/apk/release/app-armeabi-v7a-release.apk ./release"
+    - "mv build/app/outputs/apk/release/app-arm64-v8a-release.apk ./release"
+    - "mv build/app/outputs/apk/release/app-x86_64-release.apk ./release"
     - "./flutter/bin/flutter -v build apk --release"
+    - "mv build/app/outputs/apk/release/app-release.apk ./release"
     - "./flutter/bin/flutter --version"
     deploy:
       provider: releases
@@ -74,10 +79,10 @@ jobs:
       api_key:
         secure: tIC0p7eQNGas5h0OQFap54IawkHWB1pH2sybLelm+bb2pREHdDtwQH2VfspGzS2c8Q51B99PmE6UwtYESO4iqMnNlUN51XWcX50nA65tDWHdQUbd/J/7EcexjoPgqfxZ99qJAPXZfuu0Hk1gDqHjx1NmCw+gwbThuOu/P3cMztb88fYXzQODUqL1PZSSSVDS4xJN+bLWsMlf1PooS+oTEaWP5f6yXCPF7dHu9hcHqdO+9dOfLOD9pkfCZE7ml0u9tpTGeZ0kUOcJUBJQsoI23dyzmz2JBPY/zRQdkHDbWhuF7G7cyW7GjllK83/PMXWSl9veS90BRp30d6Snz8YO3cLU41+dCAX3KvpS5PHJEwWDSObuepGipYzGSV1rqBILEvEdiiR0ynO5UBQ600BbspdcCrvi0cA7enjGNoNETo8GXKHnmSESo4rKt4OBww110Mq44Pl1XxxbljxBDaPU0Qsksf0+edf+J2yJARs41/OgENuc8PLDcO41GQH4kFiDLoDYIB9HJspgsOBzMi/QsHFjp3UL/9ewU2fT0S7hGq6CrXaKYdLHGe9e4+bWXnETwTt2uKo6ov27VyymvbahEtgjuXiJTxANB6t30wwPYSASIPhXAxTr9lLYn7LHKvsstjiupTFkc7EpKC9n2NKEH5qhD5c68i3cw+sertyhHuM=
       file:
-      - build/app/outputs/apk/release/app-armeabi-v7a-release.apk
-      - build/app/outputs/apk/release/app-arm64-v8a-release.apk
-      - build/app/outputs/apk/release/app-x86_64-release.apk
-      - build/app/outputs/apk/release/app-release.apk
+      - release/app-armeabi-v7a-release.apk
+      - release/app-arm64-v8a-release.apk
+      - release/app-x86_64-release.apk
+      - release/app-release.apk
       on:
         tags: true
 before_install:
