@@ -8,7 +8,7 @@ public class MainActivity extends FlutterActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    Intent it=new Intent(this, com.iotserv.gateway.NatCloudClientService.class);
+    Intent it=new Intent(this, NatCloudClientService.class);
     startService(it);
   }
 }
