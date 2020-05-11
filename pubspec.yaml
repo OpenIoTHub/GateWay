@@ -24,6 +24,8 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   http: ^0.12.0+2
+  modules:
+    git: https://github.com/OpenIoTHub/modules
 
 dev_dependencies:
   flutter_test:
