@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         "firmware-respository": "https://github.com/OpenIoTHub/gateway-go",
         "firmware-version": "version",
       },
-      ip: "localhost",
+      ip: "127.0.0.1",
       port: 1082);
   @override
   Widget build(BuildContext context) {
