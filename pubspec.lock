@@ -265,11 +265,9 @@ packages:
   modules:
     dependency: "direct main"
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: b9f16ad5c3e83c42b9ebbbc84bc2de56dfee2063
-      url: "https://github.com/OpenIoTHub/modules"
-    source: git
+      path: "../modules"
+      relative: true
+    source: path
     version: "0.0.1"
   open_file:
     dependency: transitive
