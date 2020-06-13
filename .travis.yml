@@ -55,12 +55,12 @@ jobs:
     - gomobile version
     - pwd
 #    - find / client.aar
-    - cd gateway-go/mobile
+    - cd gateway-go/client
     - gomobile bind -target=android
     - cd ../..
     - rm -rf android/app/libs/*.aar
     - ls -a
-    - cp ./gateway-go/mobile/client.aar android/app/libs
+    - cp ./gateway-go/client/client.aar android/app/libs
     # build aar over
     script:
     - yes | sdkmanager "platforms;android-28"
