@@ -77,7 +77,7 @@ packages:
       name: crypto
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.1.4"
+    version: "2.1.5"
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -99,13 +99,27 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.1.0"
+  file:
+    dependency: transitive
+    description:
+      name: file
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.1.0"
   file_picker:
     dependency: transitive
     description:
       name: file_picker
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.9.0+1"
+    version: "1.11.0+2"
+  file_picker_platform_interface:
+    dependency: transitive
+    description:
+      name: file_picker_platform_interface
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.2.0"
   fixnum:
     dependency: transitive
     description:
@@ -156,7 +170,7 @@ packages:
       name: flutter_plugin_android_lifecycle
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.7"
+    version: "1.0.8"
   flutter_smartlink:
     dependency: transitive
     description:
@@ -198,7 +212,7 @@ packages:
       name: googleapis_auth
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.2.11+1"
+    version: "0.2.12"
   grpc:
     dependency: transitive
     description:
@@ -227,13 +241,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "3.1.4"
-  js:
+  intl:
     dependency: transitive
     description:
-      name: js
+      name: intl
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.6.1+1"
+    version: "0.16.1"
   matcher:
     dependency: transitive
     description:
@@ -267,7 +281,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: b9f16ad5c3e83c42b9ebbbc84bc2de56dfee2063
+      resolved-ref: "5f2268bdb468a0b3af862460233db92896e3c5ad"
       url: "https://github.com/OpenIoTHub/modules"
     source: git
     version: "0.0.1"
@@ -283,7 +297,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "0149c4cce17a76561bf2f92867074f1d05f1f11e"
+      resolved-ref: b455c173cb1a9d3c3a7a7df9c9dbb7365b545866
       url: "https://github.com/OpenIoTHub/openiothub-grpc-api"
     source: git
     version: "1.0.0"
@@ -300,7 +314,7 @@ packages:
       name: package_info
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.4.0+18"
+    version: "0.4.1"
   path:
     dependency: transitive
     description:
@@ -314,21 +328,28 @@ packages:
       name: path_provider
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.6.8"
+    version: "1.6.10"
+  path_provider_linux:
+    dependency: transitive
+    description:
+      name: path_provider_linux
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.0.1+1"
   path_provider_macos:
     dependency: transitive
     description:
       name: path_provider_macos
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.0.4+2"
+    version: "0.0.4+3"
   path_provider_platform_interface:
     dependency: transitive
     description:
       name: path_provider_platform_interface
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "1.0.1"
+    version: "1.0.2"
   pedantic:
     dependency: transitive
     description:
@@ -349,7 +370,7 @@ packages:
       name: petitparser
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "3.0.2"
+    version: "3.0.4"
   platform:
     dependency: transitive
     description:
@@ -357,6 +378,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.2.1"
+  platform_detect:
+    dependency: transitive
+    description:
+      name: platform_detect
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.4.0"
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -364,6 +392,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.2"
+  process:
+    dependency: transitive
+    description:
+      name: process
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "3.0.13"
   protobuf:
     dependency: transitive
     description:
@@ -378,6 +413,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.1+1"
+  pub_semver:
+    dependency: transitive
+    description:
+      name: pub_semver
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.4.4"
   retry:
     dependency: transitive
     description:
@@ -390,7 +432,7 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: d212905494424795bf9543122cfb23dad1c30377
+      resolved-ref: "23f55b20097bc3ae8ae524ac7f187403da7844f7"
       url: "https://github.com/OpenIoTHub/server-grpc-api"
     source: git
     version: "1.0.0"
@@ -400,14 +442,14 @@ packages:
       name: shared_preferences
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.5.7+2"
+    version: "0.5.7+3"
   shared_preferences_macos:
     dependency: transitive
     description:
       name: shared_preferences_macos
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.0.1+8"
+    version: "0.0.1+10"
   shared_preferences_platform_interface:
     dependency: transitive
     description:
@@ -421,7 +463,7 @@ packages:
       name: shared_preferences_web
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.2+5"
+    version: "0.1.2+7"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -447,7 +489,7 @@ packages:
       name: ssh
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.0.6"
+    version: "0.0.7"
   stack_trace:
     dependency: transitive
     description:
@@ -496,14 +538,14 @@ packages:
       name: url_launcher
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "5.4.7"
+    version: "5.4.10"
   url_launcher_macos:
     dependency: transitive
     description:
       name: url_launcher_macos
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.0.1+5"
+    version: "0.0.1+7"
   url_launcher_platform_interface:
     dependency: transitive
     description:
@@ -517,14 +559,14 @@ packages:
       name: url_launcher_web
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.1.1+5"
+    version: "0.1.1+6"
   uuid:
     dependency: transitive
     description:
       name: uuid
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "2.0.4"
+    version: "2.1.0"
   vector_math:
     dependency: transitive
     description:
@@ -547,7 +589,14 @@ packages:
       name: webview_flutter
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.3.21"
+    version: "0.3.22+1"
+  xdg_directories:
+    dependency: transitive
+    description:
+      name: xdg_directories
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.1.0"
   xml:
     dependency: transitive
     description:
