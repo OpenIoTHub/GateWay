@@ -6,7 +6,7 @@ import 'package:modules/pages/mdnsService/mDNSService/getway.dart';
 import 'package:modules/model/portService.dart';
 
 void main() => runApp(new MyApp());
-
+//TODO 开机自启，配置保存，斐讯r1安装网关脚本
 class MyApp extends StatelessWidget {
   var gatewayPortService = PortService(
       portConfig: null,
