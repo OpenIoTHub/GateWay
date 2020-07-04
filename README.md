@@ -6,6 +6,7 @@
 
 #### 下载：
 ##### https://github.com/OpenIoTHub/GateWay/releases
+##### 斐讯r1音箱安装:https://github.com/OpenIoTHub/GateWay/releases 中的phicomm-r1-install-gateway.zip
 #### 访问工具下载：
 ##### https://github.com/OpenIoTHub/OpenIoTHub/releases
 #### 界面:
