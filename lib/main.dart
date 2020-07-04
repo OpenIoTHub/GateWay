@@ -9,7 +9,6 @@ void main() => runApp(new MyApp());
 //TODO 开机自启，配置保存，斐讯r1安装网关脚本
 class MyApp extends StatelessWidget {
   var gatewayPortService = PortService(
-      portConfig: null,
       isLocal: true,
       info: {
         "name": "网关",
