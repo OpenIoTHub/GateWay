@@ -79,7 +79,6 @@ jobs:
     - ./flutter/bin/flutter -v build apk --release
     - mv build/app/outputs/apk/release/app-release.apk ./release
     - ./flutter/bin/flutter --version
-    - tree
     deploy:
       provider: releases
       skip_cleanup: true
