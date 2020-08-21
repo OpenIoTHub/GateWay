@@ -38,7 +38,7 @@
 #add by Farry
 **/android/key.properties
 **/android/key.jks
-**/android/app/libs/*.arr
+**/android/app/libs/*.aar
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
