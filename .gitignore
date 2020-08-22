@@ -39,6 +39,7 @@
 **/android/key.properties
 **/android/key.jks
 **/android/app/libs/*.aar
+*.apk
 
 # iOS/XCode related
 **/ios/**/*.mode1v3
