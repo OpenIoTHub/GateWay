@@ -57,7 +57,7 @@ jobs:
     - pwd
 #    - find / client.aar
     - cd gateway-go/client
-    - export go111module=off
+    - go env -w GO111MODULE=off
     - go env
     - gomobile bind -target=android
     - cd ../..
