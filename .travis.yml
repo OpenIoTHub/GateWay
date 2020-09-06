@@ -39,12 +39,13 @@ jobs:
     - git clone https://github.com/OpenIoTHub/gateway-go.git
     # download golang
     - wget -q https://dl.google.com/go/go1.15.1.linux-amd64.tar.gz
-    - sudo tar -zxf go1.14.1.linux-amd64.tar.gz -C /usr/local
+    - sudo tar -zxf go1.15.1.linux-amd64.tar.gz -C /usr/local
     - export GOROOT=/usr/local/go
     - export GOPATH=/home/travis/go
     - export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
     - go version
     - go env
+    - export GO111MODULE=off
     # download ndk
     - wget -q https://dl.google.com/android/repository/android-ndk-r21-linux-x86_64.zip
     - sudo unzip -q android-ndk-r21-linux-x86_64.zip -d $ANDROID_HOME
@@ -58,7 +59,6 @@ jobs:
     - go get -u github.com/OpenIoTHub/gateway-go
 #    - find / client.aar
     - cd gateway-go/client
-    - go env -w GO111MODULE=off
     - go env
     - gomobile bind -target=android .
     - cd ../..
