@@ -59,7 +59,7 @@ jobs:
     - cd gateway-go/client
     - go env -w GO111MODULE=off
     - go env
-    - gomobile bind -target=android
+    - gomobile bind -target=android .
     - cd ../..
     - rm -rf android/app/libs/*.aar
     - ls -a
