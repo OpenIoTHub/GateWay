@@ -57,7 +57,7 @@ jobs:
     - go get -u github.com/OpenIoTHub/gateway-go
     - go env
     - rm -rf android/app/libs/*.aar
-    - gomobile bind -target=android -o=android/app/libs github.com/OpenIoTHub/gateway-go/client
+    - gomobile bind -target=android -o=android/app/libs/client.aar github.com/OpenIoTHub/gateway-go/client
     # build aar over
     script:
     - yes | sdkmanager "platforms;android-28"
