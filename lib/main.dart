@@ -1,9 +1,7 @@
 // Step 7 (Final): Change the app's theme
-
 import 'package:flutter/material.dart';
-import 'package:modules/pages/gateWay/findmDNSClientList.dart';
-import 'package:modules/pages/mdnsService/mDNSService/getway.dart';
-import 'package:modules/model/portService.dart';
+import 'package:openiothub_plugin/plugins/mdnsService/mDNSService/getway.dart';
+import 'package:openiothub_models/models/portService.dart';
 
 void main() => runApp(new MyApp());
 //TODO 开机自启，配置保存，斐讯r1安装网关脚本
